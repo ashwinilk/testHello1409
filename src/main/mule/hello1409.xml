@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:http="http://www.mulesoft.org/schema/mule/http" xmlns="http://www.mulesoft.org/schema/mule/core"
+	xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd">
+	<http:listener-config name="HTTP_Listener_config" doc:name="HTTP Listener config" doc:id="c9fbe5bb-7bc8-410b-9669-6a1d4b3d50b1" >
+		<http:listener-connection host="0.0.0.0" port="8081" />
+	</http:listener-config>
+	<flow name="hello1409Flow" doc:id="40af902f-f749-4c01-a2d0-dcc8d09a9353" >
+		<http:listener doc:name="Listener" doc:id="bacf869c-7986-4de3-beac-63402caf3624" config-ref="HTTP_Listener_config" path="/test1409"/>
+		<logger level="INFO" doc:name="Logger" doc:id="fc0d2052-58eb-4265-9cb7-f86e689bad20" />
+	</flow>
+</mule>
